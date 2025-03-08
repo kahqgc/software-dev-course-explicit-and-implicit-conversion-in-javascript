@@ -19,14 +19,32 @@ Use console.log() to clearly show the before-and-after type conversions.
 */
 
 
-let result = "5" - 2;
+let result = Number("5") - 2; //explicitly converted string into a number
 console.log("The result is: " + result);
+console.log(typeof "5") // results as a string
+console.log(typeof result) // results as a number
 
-let isValid = Boolean("false");
+let isValid = Boolean("false"===false); // === makes a comparison between values without making any changes to the data type
 if (isValid) {
-    console.log("This is valid!");
+    console.log("This is valid")
+    ;
 }
+console.log(typeof "false") // results as string
+console.log(typeof false) // results as boolean
 
-let age = "25";
+let age = Number("25"); //explicitly converted string to number
 let totalAge = age + 5;
 console.log("Total Age: " + totalAge);
+console.log(typeof age) // reads as a number
+
+//examples
+ 
+let number = 360;
+console.log(typeof number) //reads as number
+let greeting = "hello";
+let final = number + greeting;
+console.log(final);
+console.log(typeof final); // converted explicitly to string
+
+let space = "";
+console.log(Boolean(space)); //reads as false implicitly
